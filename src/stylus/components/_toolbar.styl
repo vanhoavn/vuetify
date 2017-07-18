@@ -1,8 +1,7 @@
 .toolbar
-  position: relative
   transition: .3s $transition.swing
   width: 100%
-  will-change: padding-left
+  z-index: 1
   elevation(4)
     
   .input-group--solo
@@ -87,17 +86,6 @@
   &--card
     border-radius: $card-border-radius $card-border-radius 0 0
     elevation(0)
-    
-  &--fixed
-    position: fixed
-    z-index: 2
-
-  &--fixed, &--absolute
-    top: 0
-    left: 0
-
-    + main
-      padding-top: $toolbar-height
       
   &--floating
     display: inline-flex
