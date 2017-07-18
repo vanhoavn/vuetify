@@ -1,10 +1,13 @@
 .content
+  display: flex
+  flex: 1 1 auto
+  flex-direction: column
   overflow-y: auto
 
 .container
   margin-right: auto
   margin-left: auto
-  flex-basis: 100%
+  flex: 1 0 auto
   padding: $grid-gutters.lg
 
   for size, width in $container-max-widths
