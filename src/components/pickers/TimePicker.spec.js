@@ -1,11 +1,11 @@
 import Card from '~components/cards/Card'
-import Transitions from '~components/transitions/_index'
+import { FadeTransition } from '~components/transitions'
 import TimePicker from '~components/pickers/TimePicker'
 import { test } from '~util/testing'
 
 TimePicker.components = {
   'v-card': Card,
-  'v-fade-transition': Transitions.FadeTransition
+  'v-fade-transition': FadeTransition
 }
 
 test('TimePicker.js', ({ mount }) => {
@@ -21,7 +21,7 @@ test('TimePicker.js', ({ mount }) => {
   })
 
   it('should accept a date object for a value', () => {
-    const now = new Date(2017,7,1,0,0,0,0)
+    const now = new Date(2017, 7, 1, 0, 0, 0, 0)
     const wrapper = mount(TimePicker, {
       propsData: {
         value: now
