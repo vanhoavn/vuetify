@@ -21,9 +21,11 @@ const Container = Grid('container')
 const Flex = Grid('flex')
 const Layout = Grid('layout')
 const Spacer = createSimpleFunctional('spacer')
+const Content = createSimpleFunctional('content')
 
 export default {
   Container,
+  Content,
   Flex,
   Layout,
   Spacer
