@@ -1,16 +1,13 @@
 .navigation-drawer
-  flex: 1 0 320px
-  max-width: 320px
+  flex: 1 1 auto
+  max-width: 280px
   overflow-y: auto
   overflow-x: hidden
   -webkit-overflow-scrolling: touch
   padding: 0 0 100px
   pointer-events: auto
   transition: .3s $transition.swing
-  top: 0
-  left: 0
   will-change: transform
-  z-index: 3
 
   // Remove animation when booting up
   // &:not(.navigation-drawer--is-booted)
@@ -69,80 +66,80 @@
   &--floating:after
     display: none
 
-  &--mini-variant
-    margin-top: $toolbar-height
-    max-height: "calc(100vh - %s)" % $toolbar-height
-    overflow: hidden
-    width: $navigation-drawer-mini-variant-width
+  // &--mini-variant
+  //   margin-top: $toolbar-height
+  //   max-height: "calc(100vh - %s)" % $toolbar-height
+  //   overflow: hidden
+  //   width: $navigation-drawer-mini-variant-width
 
-    @media all and (max-width: $grid-breakpoints.lg) and (orientation : landscape)
-      margin-top: $toolbar-mobile-landscape-height
-      max-height: "calc(100vh - %s)" % $toolbar-mobile-landscape-height
+  //   @media all and (max-width: $grid-breakpoints.lg) and (orientation : landscape)
+  //     margin-top: $toolbar-mobile-landscape-height
+  //     max-height: "calc(100vh - %s)" % $toolbar-mobile-landscape-height
 
-    .list__tile__action,
-    .list__tile__avatar
-      justify-content: center
-      min-width: 48px
+  //   .list__tile__action,
+  //   .list__tile__avatar
+  //     justify-content: center
+  //     min-width: 48px
 
-    .list__tile__content,
-    .list__tile:after
-      opacity: 0
+  //   .list__tile__content,
+  //   .list__tile:after
+  //     opacity: 0
 
-    .subheader,
-    .divider,
-    .list--group
-      display: none !important
+  //   .subheader,
+  //   .divider,
+  //   .list--group
+  //     display: none !important
 
-    ~ .toolbar
-      padding-left: 0 !important
+  //   ~ .toolbar
+  //     padding-left: 0 !important
 
-    &:not(.navigation-drawer--close)
-      ~ main
-        padding-left: $navigation-drawer-mini-variant-width !important
+  //   &:not(.navigation-drawer--close)
+  //     ~ main
+  //       padding-left: $navigation-drawer-mini-variant-width !important
 
-      ~ .footer:not(.footer--fixed):not(.footer--absolute)
-        padding-left: $navigation-drawer-mini-variant-width !important
+  //     ~ .footer:not(.footer--fixed):not(.footer--absolute)
+  //       padding-left: $navigation-drawer-mini-variant-width !important
 
-  &--temporary, &--is-mobile:not(.navigation-drawer--permanent)
-    z-index: 5
+  // &--temporary, &--is-mobile:not(.navigation-drawer--permanent)
+  //   z-index: 5
 
-    &:not(.navigation-drawer--close)
-      elevation(16)
+  //   &:not(.navigation-drawer--close)
+  //     elevation(16)
 
-  ~ toolbar
-    + main
-      min-height: "calc(100vh - %s)" % $toolbar-height
+  // ~ toolbar
+  //   + main
+  //     min-height: "calc(100vh - %s)" % $toolbar-height
 
-  > .list
-    .list__tile
-      transition: none
-      font-weight: $navigation-drawer-item-font-weight
+  // > .list
+  //   .list__tile
+  //     transition: none
+  //     font-weight: $navigation-drawer-item-font-weight
 
-      &--active
-        .list__tile__title
-          color: inherit
+  //     &--active
+  //       .list__tile__title
+  //         color: inherit
 
-        > *:first-child
-          .icon
-            color: $navigation-drawer-item-active-color
+  //       > *:first-child
+  //         .icon
+  //           color: $navigation-drawer-item-active-color
 
-    .list--group
-      .list__tile
-        font-weight: $navigation-drawer-group-item-font-weight
+  //   .list--group
+  //     .list__tile
+  //       font-weight: $navigation-drawer-group-item-font-weight
 
-      &__header--active
-        &:after
-          background: transparent
+  //     &__header--active
+  //       &:after
+  //         background: transparent
 
-        .list__tile__action:first-of-type
-          .icon
-            color: $navigation-drawer-item-active-color
+  //       .list__tile__action:first-of-type
+  //         .icon
+  //           color: $navigation-drawer-item-active-color
 
-    .list--group__container
-      .list__tile--active
-        .list__tile__title
-          color: $navigation-drawer-item-active-color
+  //   .list--group__container
+  //     .list__tile--active
+  //       .list__tile__title
+  //         color: $navigation-drawer-item-active-color
 
-  > .list:not(.list--dense)
-    .list__tile
-      font-size: $navigation-drawer-item-font-size
+  // > .list:not(.list--dense)
+  //   .list__tile
+  //     font-size: $navigation-drawer-item-font-size

@@ -1,8 +1,17 @@
 .application
   display: flex
-  flex-direction: row
+  flex-wrap: wrap
   height: 100vh
   -webkit-backface-visibility: hidden
+
+  main,
+  .content
+    display: flex
+    flex: 1 1 auto
+    flex-direction: column
+
+  .content
+    overflow-y: auto
 
 // Main theme
 .application
